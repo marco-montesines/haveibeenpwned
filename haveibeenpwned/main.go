@@ -1,26 +1,13 @@
-# A Go Package Client Library for Troy Hunt's haveibeenpwned API version 3 
-> https://haveibeenpwned.com/API/v3
-
-# Test
-```
-go test -v -run TestHaveIBeenPwned
-go test -v -run TestHaveIBeenPwned_GetDataClasses
-go test -v
-go test ./...
-```
-
-# Example Usage
-```go
 package main
 
 import (
 	"context"
 	"fmt"
-    
-	"github.com/klopjq/haveibeenpwned"	
+
+	"github.com/klopjq/haveibeenpwned"
 )
 
-func main()  {
+func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
@@ -68,5 +55,3 @@ func main()  {
 		fmt.Printf("%#v\n", pastes[i])
 	}
 }
-
-```
