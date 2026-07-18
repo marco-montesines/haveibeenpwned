@@ -1,4 +1,4 @@
-module github.com/klopjq/haveibeenpwned
+module github.com/marco-montesines/haveibeenpwned
 
 go 1.25.0
 
