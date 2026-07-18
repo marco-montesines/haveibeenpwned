@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/klopjq/haveibeenpwned"
+	"github.com/marco-montesines/haveibeenpwned"
 )
 
 func main() {
