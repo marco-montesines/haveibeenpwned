@@ -1,0 +1,8 @@
+// Scopes the Go workspace to the root module. The FrankenPHP extension
+// module (frankenphp/extension) is intentionally excluded: it needs cgo and
+// the PHP development headers, which only exist inside the Docker build
+// (frankenphp/Dockerfile), so IDEs and local go commands must not try to
+// type-check it.
+go 1.25.0
+
+use .

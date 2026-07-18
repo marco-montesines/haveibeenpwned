@@ -1,0 +1,26 @@
+services:
+  # HTTP JSON API in front of the Have I Been Pwned API.
+  # Published image: ghcr.io/marco-montesines/haveibeenpwned
+  api:
+    build: .
+    image: ghcr.io/marco-montesines/haveibeenpwned:latest
+    ports:
+      - "8080:8080"
+    environment:
+      # Only needed for account lookups (/v1/breachedaccount, /v1/pasteaccount).
+      HIBP_API_KEY: ${HIBP_API_KEY:-}
+    restart: unless-stopped
+
+  # FrankenPHP with the hibp PHP extension (written in Go) compiled in,
+  # serving the demo page from frankenphp/example.
+  # Demo: http://localhost:8081/?password=P@ssw0rd
+  frankenphp:
+    build:
+      context: .
+      dockerfile: frankenphp/Dockerfile
+    ports:
+      - "8081:80"
+    environment:
+      SERVER_NAME: ":80"
+      HIBP_API_KEY: ${HIBP_API_KEY:-}
+    restart: unless-stopped
