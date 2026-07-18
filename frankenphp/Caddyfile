@@ -1,0 +1,13 @@
+# Caddyfile for the custom FrankenPHP build with the hibp extension.
+# (The stock image Caddyfile enables brotli, which is a separate Caddy module
+# not included in this build.)
+{
+	frankenphp
+}
+
+{$SERVER_NAME:localhost} {
+	log
+	root * /app/public
+	encode zstd gzip
+	php_server
+}

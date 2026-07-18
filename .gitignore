@@ -1,27 +1,27 @@
-# Binaries for programs and plugins
+# Binaries
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
+bin/
+dist/
+/frankenphp/frankenphp
 
-# Test binary, built with `go test -c`
+# Test & coverage artifacts
 *.test
-
-# Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+coverage.html
 
-# Dependency directories (remove the comment below to include it)
-vendor/*
+# Dependency directories
+vendor/
 
-# GoLand project files
-.idea
+# IDE / editor
+.idea/
+.vscode/
 
-.out
-.log
+# OS
+.DS_Store
 
-postgres-data
-*-packr.go
-*-packr.go.tmpl
-cmd/dwh_service/dwh_service
-cmd/swagger_ui/swagger_ui
+# Local environment
+.env
