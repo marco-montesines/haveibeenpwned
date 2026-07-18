@@ -165,8 +165,9 @@ HIBP_API_KEY=... docker compose up --build
 ```
 
 Images are built for `linux/amd64` and `linux/arm64` and published to GHCR by
-[`.github/workflows/docker.yml`](.github/workflows/docker.yml) on every push
-to `master` (`:latest`, `:sha-…`) and on version tags (`:1.2.3`, `:1.2`).
+[`.github/workflows/docker.yml`](.github/workflows/docker.yml) only on version
+tags (`v1.2.3` → `:1.2.3`, `:1.2`, `:latest`) or when the workflow is run
+manually — never on regular pushes or pull requests.
 
 ## FrankenPHP: call the library natively from PHP
 

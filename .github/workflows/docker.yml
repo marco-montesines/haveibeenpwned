@@ -1,8 +1,9 @@
 name: Docker
 
+# Images are only published deliberately: on a version tag (v1.0.0) or via
+# the manual "Run workflow" button — never on regular pushes or PRs.
 on:
   push:
-    branches: [ master ]
     tags: [ 'v*' ]
   workflow_dispatch:
 
@@ -38,7 +39,7 @@ jobs:
         with:
           images: ghcr.io/${{ github.repository }}
           tags: |
-            type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=latest,enable=${{ startsWith(github.ref, 'refs/tags/v') || github.ref_name == 'master' }}
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
             type=sha
