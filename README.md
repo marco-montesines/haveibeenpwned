@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/marco-montesines/haveibeenpwned/actions/workflows/ci.yml/badge.svg)](https://github.com/marco-montesines/haveibeenpwned/actions/workflows/ci.yml)
 [![Docker](https://github.com/marco-montesines/haveibeenpwned/actions/workflows/docker.yml/badge.svg)](https://github.com/marco-montesines/haveibeenpwned/actions/workflows/docker.yml)
+[![CodeQL](https://github.com/marco-montesines/haveibeenpwned/actions/workflows/codeql.yml/badge.svg)](https://github.com/marco-montesines/haveibeenpwned/actions/workflows/codeql.yml)
 [![Go Reference](https://pkg.go.dev/badge/github.com/marco-montesines/haveibeenpwned.svg)](https://pkg.go.dev/github.com/marco-montesines/haveibeenpwned)
 [![Go Report Card](https://goreportcard.com/badge/github.com/marco-montesines/haveibeenpwned)](https://goreportcard.com/report/github.com/marco-montesines/haveibeenpwned)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -202,7 +203,11 @@ go vet ./...
 ```
 
 CI runs formatting, vet, build, and race-enabled tests on every push and pull
-request.
+request, plus [govulncheck](https://go.dev/blog/vuln) (known vulnerabilities
+reachable from this code), [CodeQL](https://codeql.github.com/) static
+analysis, and [gitleaks](https://github.com/gitleaks/gitleaks) secret
+scanning over the full git history. See [SECURITY.md](SECURITY.md) for the
+security policy.
 
 ## Rate limits & acceptable use
 
@@ -211,8 +216,21 @@ surfaces the `Retry-After` value via `HIBPErrorResponse.RetryAfter`. Please
 respect the [HIBP acceptable use policy](https://haveibeenpwned.com/API/v3#AcceptableUse)
 and set a descriptive User-Agent (`WithUserAgent`) identifying your project.
 
+## Disclaimer
+
+This is an **unofficial** client. It is not affiliated with, endorsed by, or
+sponsored by Have I Been Pwned or Troy Hunt. Breach data is provided by the
+[Have I Been Pwned](https://haveibeenpwned.com) service.
+
+This software is provided **"as is"**, without warranty of any kind, and is
+intended for lawful, defensive purposes — such as checking whether your own
+accounts or passwords appear in known data breaches. You are solely
+responsible for your use of it, including compliance with the
+[HIBP acceptable use policy](https://haveibeenpwned.com/API/v3#AcceptableUse)
+and all applicable laws. The authors and contributors accept no liability for
+any misuse or for any damages arising from the use of this software. See
+[LICENSE](LICENSE) for the full terms.
+
 ## License
 
-[MIT](LICENSE). Not affiliated with or endorsed by Have I Been Pwned or Troy
-Hunt. Data is provided by the [Have I Been Pwned](https://haveibeenpwned.com)
-service.
+[MIT](LICENSE).
