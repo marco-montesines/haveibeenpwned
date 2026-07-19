@@ -216,6 +216,12 @@ surfaces the `Retry-After` value via `HIBPErrorResponse.RetryAfter`. Please
 respect the [HIBP acceptable use policy](https://haveibeenpwned.com/API/v3#AcceptableUse)
 and set a descriptive User-Agent (`WithUserAgent`) identifying your project.
 
+Breach and paste data returned by the API is licensed
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): if your
+application displays it, you must clearly attribute
+[Have I Been Pwned](https://haveibeenpwned.com) as the source with a visible
+link. (The Pwned Passwords range API has no attribution requirement.)
+
 ## Disclaimer
 
 This is an **unofficial** client. It is not affiliated with, endorsed by, or
