@@ -82,3 +82,14 @@ xcaddy build \
 | Environment variable | Purpose                                                        |
 | -------------------- | -------------------------------------------------------------- |
 | `HIBP_API_KEY`       | Optional; only needed if you extend the extension with account lookups. |
+
+## Data source & attribution
+
+Breach data returned by `hibp_breaches()` comes from
+[Have I Been Pwned](https://haveibeenpwned.com) and is licensed
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): if your PHP
+application displays it, you must clearly attribute Have I Been Pwned as the
+source with a visible link. Password checks via
+`hibp_pwned_password_count()` use the Pwned Passwords range API, which has
+no attribution requirement. This project is not affiliated with or endorsed
+by Have I Been Pwned or Troy Hunt.
