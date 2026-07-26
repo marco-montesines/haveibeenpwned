@@ -19,6 +19,14 @@ Ships in four forms:
 - **FrankenPHP extension** — native PHP functions implemented in Go
   ([`frankenphp/`](frankenphp/README.md))
 
+## Documentation
+
+Extended documentation lives in [`docs/`](docs/README.md): [getting started](docs/getting-started.md),
+[use cases](docs/use-cases.md), [library guide](docs/library.md), [CLI](docs/cli.md),
+[HTTP API reference](docs/http-api.md), [FrankenPHP extension](docs/frankenphp.md),
+[deployment & IaC](docs/deployment.md), [releases](docs/releases.md),
+[project status](docs/status.md), [roadmap](docs/roadmap.md), and an [FAQ](docs/faq.md).
+
 ## Features
 
 | Method                          | HIBP endpoint                     | API key required |

@@ -6,10 +6,10 @@ Pick the form that matches how you want to consume the client, then follow that 
 
 | You are… | Use | Guide |
 | -------- | --- | ----- |
-| Writing a Go application | Go library | [[Library Guide|Library-Guide]] |
-| In a terminal, a shell script, or CI | `hibp` CLI | [[CLI Guide|CLI-Guide]] |
-| Using PHP/Python/Node/anything over HTTP | `hibp serve` / Docker image | [[HTTP API Reference|HTTP-API-Reference]], [[Deployment and IaC|Deployment-and-IaC]] |
-| Running PHP on FrankenPHP | Native PHP extension | [[FrankenPHP Extension|FrankenPHP-Extension]] |
+| Writing a Go application | Go library | [Library Guide](library.md) |
+| In a terminal, a shell script, or CI | `hibp` CLI | [CLI Guide](cli.md) |
+| Using PHP/Python/Node/anything over HTTP | `hibp serve` / Docker image | [HTTP API Reference](http-api.md), [Deployment and IaC](deployment.md) |
+| Running PHP on FrankenPHP | Native PHP extension | [FrankenPHP Extension](frankenphp.md) |
 
 ## 1. Go library
 
@@ -24,7 +24,7 @@ client := hibp.New(os.Getenv("HIBP_API_KEY")) // key may be empty for unauthenti
 count, err := client.PwnedPasswordCount(ctx, "P@ssw0rd")
 ```
 
-A complete runnable example lives in [`examples/quickstart`](https://github.com/marco-montesines/haveibeenpwned/blob/master/examples/quickstart/main.go). Full API docs: [[Library Guide|Library-Guide]] and [pkg.go.dev](https://pkg.go.dev/github.com/marco-montesines/haveibeenpwned).
+A complete runnable example lives in [`examples/quickstart`](https://github.com/marco-montesines/haveibeenpwned/blob/master/examples/quickstart/main.go). Full API docs: [Library Guide](library.md) and [pkg.go.dev](https://pkg.go.dev/github.com/marco-montesines/haveibeenpwned).
 
 ## 2. CLI
 
@@ -41,7 +41,7 @@ No Go toolchain on the target machine? The container image includes the same bin
 docker run --rm ghcr.io/marco-montesines/haveibeenpwned:latest --help
 ```
 
-Full command reference: [[CLI Guide|CLI-Guide]].
+Full command reference: [CLI Guide](cli.md).
 
 ## 3. HTTP API server
 
@@ -61,7 +61,7 @@ go install github.com/marco-montesines/haveibeenpwned/cmd/hibp@latest
 hibp serve -addr :8080
 ```
 
-Endpoint reference: [[HTTP API Reference|HTTP-API-Reference]]. Production setups (Compose, Kubernetes, systemd): [[Deployment and IaC|Deployment-and-IaC]].
+Endpoint reference: [HTTP API Reference](http-api.md). Production setups (Compose, Kubernetes, systemd): [Deployment and IaC](deployment.md).
 
 ## 4. FrankenPHP demo (API + PHP page)
 
@@ -73,7 +73,7 @@ HIBP_API_KEY=... docker compose up --build
 # FrankenPHP demo: http://localhost:8081/?password=P@ssw0rd&domain=adobe.com
 ```
 
-Details: [[FrankenPHP Extension|FrankenPHP-Extension]].
+Details: [FrankenPHP Extension](frankenphp.md).
 
 ## Configuration (all forms)
 

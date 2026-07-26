@@ -63,7 +63,7 @@ curl -s -X POST http://hibp-api:8080/v1/pwnedpassword -d '{"password":"P@ssw0rd"
 # {"count":6421042,"pwned":true}
 ```
 
-See [[HTTP API Reference|HTTP-API-Reference]] — the check is a `POST` so the password never appears in URLs or access logs.
+See [HTTP API Reference](http-api.md) — the check is a `POST` so the password never appears in URLs or access logs.
 
 ## 2. Breach exposure check for your own accounts
 
@@ -99,7 +99,7 @@ hibp breach Adobe | jq '{date: .BreachDate, count: .PwnCount, data: .DataClasses
 
 ## 5. Non-Go platforms: one shared breach-check service
 
-Run `hibp serve` (or the published container image) once, and every service in your stack — PHP, Python, Node, shell — gets breach checking over plain HTTP JSON, without each team reimplementing a HIBP client or handling SHA-1/k-anonymity themselves. See [[Deployment and IaC|Deployment-and-IaC]].
+Run `hibp serve` (or the published container image) once, and every service in your stack — PHP, Python, Node, shell — gets breach checking over plain HTTP JSON, without each team reimplementing a HIBP client or handling SHA-1/k-anonymity themselves. See [Deployment and IaC](deployment.md).
 
 ## A note on responsible use
 

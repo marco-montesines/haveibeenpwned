@@ -32,7 +32,7 @@ Platform:
 - **Stealer-log endpoints** — email/website/email-domain stealer-log lookups (subscription-gated).
 - **Optional response caching helper** — e.g. for the breach catalogue, which changes rarely. Would be opt-in and documented with the CC BY 4.0 attribution obligations in mind.
 - **More FrankenPHP functions** — e.g. `hibp_breached_account()`; the current extension deliberately exposes only the unauthenticated endpoints.
-- **Additional deployment recipes** — Helm chart or Kustomize base if there is demand (see [[Deployment and IaC|Deployment-and-IaC]] for what exists today).
+- **Additional deployment recipes** — Helm chart or Kustomize base if there is demand (see [Deployment and IaC](deployment.md) for what exists today).
 
 ## Non-goals
 
@@ -45,4 +45,4 @@ Things this project intentionally will **not** do:
 
 ## Feedback
 
-The roadmap is shaped by actual usage. If your use case ([[Use Cases|Use-Cases]]) needs something that isn't here, open an issue — small, well-scoped feature requests with a concrete use case get picked up first.
+The roadmap is shaped by actual usage. If your use case ([Use Cases](use-cases.md)) needs something that isn't here, open an issue — small, well-scoped feature requests with a concrete use case get picked up first.

@@ -34,11 +34,11 @@ All four delivery forms are functional and released:
 | `dataclasses` | `GetDataClasses` | ✅ |
 | `breachedaccount/{account}` | `GetBreachedAccount` | ✅ |
 | `pasteaccount/{account}` | `GetPastedAccount` | ✅ |
-| `latestbreach` | — | not yet ([[Roadmap]]) |
-| `subscription/status` | — | not yet ([[Roadmap]]) |
-| `breacheddomain/{domain}` (domain search) | — | not yet ([[Roadmap]]) |
-| Stealer-log endpoints | — | not yet ([[Roadmap]]) |
-| NTLM mode for Pwned Passwords | — | not yet ([[Roadmap]]) |
+| `latestbreach` | — | not yet ([Roadmap](roadmap.md)) |
+| `subscription/status` | — | not yet ([Roadmap](roadmap.md)) |
+| `breacheddomain/{domain}` (domain search) | — | not yet ([Roadmap](roadmap.md)) |
+| Stealer-log endpoints | — | not yet ([Roadmap](roadmap.md)) |
+| NTLM mode for Pwned Passwords | — | not yet ([Roadmap](roadmap.md)) |
 
 The `Breach` model includes the newer flags `IsMalware`, `IsStealerLog`, and `IsSubscriptionFree`.
 
@@ -51,4 +51,4 @@ This project is deliberately **low-maintenance**:
 - Container images are published **only** on `v*` tags or a manual workflow run — never on regular pushes.
 - Published Go module versions are immutable (Go module proxy); any fix ships as a new patch tag.
 
-See [[Releases and Versioning|Releases-and-Versioning]] for the release procedure and [[Roadmap]] for what's next.
+See [Releases and Versioning](releases.md) for the release procedure and [Roadmap](roadmap.md) for what's next.

@@ -16,7 +16,7 @@ By design, "not found in any breach" is the *good* outcome, not an error. The li
 
 ### I got a 429. What now?
 
-You hit the HIBP rate limit for your API key. The error carries the `Retry-After` value (`HIBPErrorResponse.RetryAfter` in Go, the `Retry-After` header from `hibp serve`). Wait that many seconds and retry. The client will never retry for you — that's [deliberate](Roadmap#non-goals).
+You hit the HIBP rate limit for your API key. The error carries the `Retry-After` value (`HIBPErrorResponse.RetryAfter` in Go, the `Retry-After` header from `hibp serve`). Wait that many seconds and retry. The client will never retry for you — that's [deliberate](roadmap.md#non-goals).
 
 ### Is this an official HIBP client?
 
@@ -26,9 +26,9 @@ No. It is not affiliated with, endorsed by, or sponsored by Have I Been Pwned or
 
 Yes, with attribution: breach and paste data is licensed CC BY 4.0, so anything *displaying* it must visibly credit [haveibeenpwned.com](https://haveibeenpwned.com) with a link. Pwned Passwords range checks carry no attribution requirement.
 
-### How do I suggest a change to this wiki?
+### How do I suggest a change to this documentation?
 
-The wiki is published automatically from the [`wiki/`](https://github.com/marco-montesines/haveibeenpwned/tree/master/wiki) directory of the main repository — edits made through the wiki web UI get overwritten on the next sync. Open a pull request against `wiki/` instead.
+Open a pull request against the [`docs/`](https://github.com/marco-montesines/haveibeenpwned/tree/master/docs) directory — the docs are versioned and reviewed together with the code.
 
 ### Which Go version do I need?
 
@@ -58,7 +58,7 @@ Bind to all interfaces inside containers. The image already does; if you run the
 
 ### Password check counts differ from last month
 
-Normal — HIBP ingests new breaches continuously, so counts only grow. Don't pin exact counts in tests; assert `pwned == true` or `count > 0` instead, or mock the API (see the testing section of the [[Library Guide|Library-Guide]]).
+Normal — HIBP ingests new breaches continuously, so counts only grow. Don't pin exact counts in tests; assert `pwned == true` or `count > 0` instead, or mock the API (see the testing section of the [Library Guide](library.md)).
 
 ### Something else?
 

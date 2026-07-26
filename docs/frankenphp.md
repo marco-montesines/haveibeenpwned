@@ -18,7 +18,7 @@ if (hibp_pwned_password_count($_POST['password']) > 0) {
 $breaches = json_decode(hibp_breaches('adobe.com'), true);
 ```
 
-The extension deliberately exposes only the **unauthenticated** endpoints (password range check, breach catalogue). For account-level lookups from PHP, call the [[HTTP API|HTTP-API-Reference]] instead. More functions are [[under consideration|Roadmap]].
+The extension deliberately exposes only the **unauthenticated** endpoints (password range check, breach catalogue). For account-level lookups from PHP, call the [HTTP API](http-api.md) instead. More functions are [under consideration](roadmap.md).
 
 ## Try it
 
@@ -48,7 +48,7 @@ docker run --rm -p 8081:80 -e SERVER_NAME=":80" hibp-frankenphp
 
 The extension is a **separate Go module** that needs cgo and PHP development headers, which only exist inside the Docker build. That's why:
 
-- Your IDE will report phantom errors (`php.h` not found) if it type-checks `frankenphp/extension/` locally — the repo's `go.work` exists precisely to keep that module out of the local workspace. The Docker build is the source of truth. See [[FAQ and Troubleshooting|FAQ-and-Troubleshooting]].
+- Your IDE will report phantom errors (`php.h` not found) if it type-checks `frankenphp/extension/` locally — the repo's `go.work` exists precisely to keep that module out of the local workspace. The Docker build is the source of truth. See [FAQ and Troubleshooting](faq.md).
 - Both the extension module **and** the root library module are mapped into the xcaddy build with `--with mod=path` — replace directives in a dependency's `go.mod` are ignored by Go, so both mappings are required.
 
 ## Attribution
