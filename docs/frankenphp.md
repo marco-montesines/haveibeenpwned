@@ -9,6 +9,8 @@ function hibp_pwned_password_count(string $password): int
 function hibp_breaches(string $domain = ""): string   // JSON, decode with json_decode()
 ```
 
+On lookup failure, `hibp_pwned_password_count()` returns `-1` and `hibp_breaches()` returns `{"error": "..."}` — check for both before trusting a result.
+
 ```php
 <?php
 if (hibp_pwned_password_count($_POST['password']) > 0) {
