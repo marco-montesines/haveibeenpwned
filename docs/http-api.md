@@ -97,8 +97,8 @@ The server never retries toward HIBP; honor `Retry-After` in your caller.
 
 ## Field names
 
-Breach/paste objects use HIBP's PascalCase JSON field names (`Name`, `Title`, `BreachDate`, `PwnCount`, `DataClasses`, `IsVerified`, …) — see the [HIBP data model docs](https://haveibeenpwned.com/API/v3#BreachModel) and [[Library Guide|Library-Guide]].
+Breach/paste objects use HIBP's PascalCase JSON field names (`Name`, `Title`, `BreachDate`, `PwnCount`, `DataClasses`, `IsVerified`, …) — see the [HIBP data model docs](https://haveibeenpwned.com/API/v3#BreachModel) and [Library Guide](library.md).
 
 ## Deployment note
 
-The server has **no authentication, TLS, or rate limiting of its own** — it is designed to sit on an internal network (Compose network, cluster-internal Service) behind your own perimeter. Don't expose it directly to the public internet; if external exposure is unavoidable, put it behind an authenticating reverse proxy. Remember the shared HIBP API key's rate limit is consumed by everyone calling the service. See [[Deployment and IaC|Deployment-and-IaC]].
+The server has **no authentication, TLS, or rate limiting of its own** — it is designed to sit on an internal network (Compose network, cluster-internal Service) behind your own perimeter. Don't expose it directly to the public internet; if external exposure is unavoidable, put it behind an authenticating reverse proxy. Remember the shared HIBP API key's rate limit is consumed by everyone calling the service. See [Deployment and IaC](deployment.md).

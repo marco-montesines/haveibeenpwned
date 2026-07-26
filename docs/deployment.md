@@ -7,7 +7,7 @@ How to run the HTTP API server (`hibp serve`) as a service — from a bare `dock
 | Aspect | Value |
 | ------ | ----- |
 | Image | `ghcr.io/marco-montesines/haveibeenpwned` (multi-arch: linux/amd64, linux/arm64) |
-| Tags | `:latest`, `:1`-style semver (`:1.0.3`, `:1.0`), `:sha-<commit>` — see [[Releases and Versioning|Releases-and-Versioning]] |
+| Tags | `:latest`, `:1`-style semver (`:1.0.3`, `:1.0`), `:sha-<commit>` — see [Releases and Versioning](releases.md) |
 | Listen port | `8080` |
 | Health check | `GET /healthz` → `{"status":"ok"}` |
 | Configuration | `HIBP_API_KEY` env var (optional — required only for the account endpoints) |
@@ -99,7 +99,7 @@ spec:
       targetPort: 8080
 ```
 
-Keep the Service `ClusterIP` (internal). If you must expose it, do so behind an authenticating ingress/gateway — the server itself has no auth or TLS (see the deployment note in [[HTTP API Reference|HTTP-API-Reference]]). A Helm chart / Kustomize base is [[under consideration|Roadmap]] — until then, these manifests are the template.
+Keep the Service `ClusterIP` (internal). If you must expose it, do so behind an authenticating ingress/gateway — the server itself has no auth or TLS (see the deployment note in [HTTP API Reference](http-api.md)). A Helm chart / Kustomize base is [under consideration](roadmap.md) — until then, these manifests are the template.
 
 ## Terraform (example)
 
@@ -156,4 +156,4 @@ docker build -f frankenphp/Dockerfile -t hibp-frankenphp .   # FrankenPHP demo (
 
 ## Upgrades
 
-Bump the image tag (new versions appear on [[releases|Releases-and-Versioning]]), roll the deployment. The server is stateless with graceful shutdown, so rolling updates are zero-downtime as long as you run ≥2 replicas behind a load balancer or Service.
+Bump the image tag (new versions appear on [releases](releases.md)), roll the deployment. The server is stateless with graceful shutdown, so rolling updates are zero-downtime as long as you run ≥2 replicas behind a load balancer or Service.

@@ -40,7 +40,7 @@ Global flags go **before** the command: `hibp -timeout 10s breaches`.
 | `password [<password>]` | no | Pwned Passwords check — reads stdin if the argument is omitted |
 | `account <email> [flags]` | **yes** | Breaches for an account |
 | `pastes <email>` | **yes** | Pastes for an account |
-| `serve [-addr :8080]` | optional | Run the HTTP JSON API ([[HTTP API Reference|HTTP-API-Reference]]) |
+| `serve [-addr :8080]` | optional | Run the HTTP JSON API ([HTTP API Reference](http-api.md)) |
 
 `account` flags (after the email): `-domain` (filter by breach domain), `-truncate` (default `true`, names only), `-unverified` (default `true`, include unverified breaches).
 
