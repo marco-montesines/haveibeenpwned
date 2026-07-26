@@ -25,3 +25,6 @@ vendor/
 
 # Local environment
 .env
+
+# Docs site build output
+site/
