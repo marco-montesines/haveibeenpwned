@@ -12,6 +12,7 @@ Where the project is headed. Items below are **intentions, not commitments** —
 - ✅ HTTP JSON API (`hibp serve`) + multi-arch Docker image on GHCR.
 - ✅ FrankenPHP extension exposing native PHP functions.
 - ✅ Security pipeline: race-enabled tests, `govulncheck`, CodeQL, gitleaks, Dependabot.
+- ✅ Documentation: in-repo `docs/` published as a [website](https://marco-montesines.github.io/haveibeenpwned/) via GitHub Pages.
 
 ## Planned — next
 

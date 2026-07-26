@@ -1,8 +1,9 @@
 site_name: haveibeenpwned
-site_description: Go client for the Have I Been Pwned API v3 — library, CLI, HTTP server, FrankenPHP extension
+site_description: Unofficial Go client for the Have I Been Pwned API v3 — library, CLI, HTTP server, FrankenPHP extension
 site_url: https://marco-montesines.github.io/haveibeenpwned/
 repo_url: https://github.com/marco-montesines/haveibeenpwned
 repo_name: marco-montesines/haveibeenpwned
+copyright: Copyright &copy; 2026 Marco Montesines &mdash; code MIT licensed; breach data &copy; Have I Been Pwned (CC BY 4.0)
 
 theme:
   name: material
