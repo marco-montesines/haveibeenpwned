@@ -1,6 +1,6 @@
 # haveibeenpwned
 
-A Go client for [Troy Hunt's Have I Been Pwned API v3](https://haveibeenpwned.com/API/v3), including the [Pwned Passwords](https://haveibeenpwned.com/Passwords) k-anonymity range API.
+An unofficial Go client for [Troy Hunt's Have I Been Pwned API v3](https://haveibeenpwned.com/API/v3), including the [Pwned Passwords](https://haveibeenpwned.com/Passwords) k-anonymity range API.
 
 <div class="hibp-hero">
   <span class="hibp-hero__label">k-anonymity range query</span>
