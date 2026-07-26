@@ -7,7 +7,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/marco-montesines/haveibeenpwned)](https://goreportcard.com/report/github.com/marco-montesines/haveibeenpwned)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A Go client for [Troy Hunt's Have I Been Pwned API v3](https://haveibeenpwned.com/API/v3),
+An unofficial Go client for [Troy Hunt's Have I Been Pwned API v3](https://haveibeenpwned.com/API/v3),
 including the [Pwned Passwords](https://haveibeenpwned.com/Passwords) k-anonymity range API.
 
 Ships in four forms:

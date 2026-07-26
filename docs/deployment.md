@@ -7,7 +7,7 @@ How to run the HTTP API server (`hibp serve`) as a service — from a bare `dock
 | Aspect | Value |
 | ------ | ----- |
 | Image | `ghcr.io/marco-montesines/haveibeenpwned` (multi-arch: linux/amd64, linux/arm64) |
-| Tags | `:latest`, `:1`-style semver (`:1.0.3`, `:1.0`), `:sha-<commit>` — see [Releases and Versioning](releases.md) |
+| Tags | `:latest`, `:X.Y.Z`, `:X.Y`, `:sha-<commit>` — see [Releases and Versioning](releases.md) |
 | Listen port | `8080` |
 | Health check | `GET /healthz` → `{"status":"ok"}` |
 | Configuration | `HIBP_API_KEY` env var (optional — required only for the account endpoints) |
@@ -23,10 +23,10 @@ docker run -d --name hibp \
   -p 8080:8080 \
   -e HIBP_API_KEY=... \
   --restart unless-stopped \
-  ghcr.io/marco-montesines/haveibeenpwned:1.0.3
+  ghcr.io/marco-montesines/haveibeenpwned:1.0
 ```
 
-Pin a version tag in anything long-lived; use `:latest` only for experiments.
+The examples use the `:1.0` minor tag, which follows patch releases automatically. For exact reproducibility pin the full `:X.Y.Z` of the [current release](status.md); use `:latest` only for experiments.
 
 ## Docker Compose
 
@@ -35,7 +35,7 @@ The repo's [`docker-compose.yml`](https://github.com/marco-montesines/haveibeenp
 ```yaml
 services:
   hibp-api:
-    image: ghcr.io/marco-montesines/haveibeenpwned:1.0.3
+    image: ghcr.io/marco-montesines/haveibeenpwned:1.0
     restart: unless-stopped
     environment:
       HIBP_API_KEY: ${HIBP_API_KEY}
@@ -75,7 +75,7 @@ spec:
     spec:
       containers:
         - name: hibp-api
-          image: ghcr.io/marco-montesines/haveibeenpwned:1.0.3
+          image: ghcr.io/marco-montesines/haveibeenpwned:1.0
           ports:
             - containerPort: 8080
           envFrom:
@@ -107,7 +107,7 @@ Any Terraform provider that runs containers works — the image is a plain OCI i
 
 ```hcl
 resource "docker_image" "hibp" {
-  name = "ghcr.io/marco-montesines/haveibeenpwned:1.0.3"
+  name = "ghcr.io/marco-montesines/haveibeenpwned:1.0"
 }
 
 resource "docker_container" "hibp_api" {

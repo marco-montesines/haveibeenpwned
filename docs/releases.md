@@ -2,7 +2,7 @@
 
 ## Versioning scheme
 
-Semantic versioning via git tags (`v1.0.3`). Within `v1.x`, the public Go API is stable — breaking changes would mean a new major version.
+Semantic versioning via git tags (`v*`, e.g. `v1.2.3`). Within `v1.x`, the public Go API is stable — breaking changes would mean a new major version.
 
 ## What a release produces
 
@@ -10,12 +10,12 @@ Pushing a `v*` tag triggers [`docker.yml`](https://github.com/marco-montesines/h
 
 | Tag | Example | Use for |
 | --- | ------- | ------- |
-| `:X.Y.Z` | `:1.0.3` | Production — fully pinned |
+| `:X.Y.Z` | `:1.2.3` | Production — fully pinned |
 | `:X.Y` | `:1.0` | Auto-pick patch releases |
 | `:latest` | | Experiments only |
 | `:sha-<commit>` | | Exact provenance |
 
-The same git tag **is** the Go module release: `go get github.com/marco-montesines/haveibeenpwned@v1.0.3`. There is no separate registry publish step — the Go module proxy fetches the tag from GitHub and caches it permanently, and [pkg.go.dev](https://pkg.go.dev/github.com/marco-montesines/haveibeenpwned) regenerates the API docs from the source.
+The same git tag **is** the Go module release: `go get github.com/marco-montesines/haveibeenpwned@v1.2.3`. There is no separate registry publish step — the Go module proxy fetches the tag from GitHub and caches it permanently, and [pkg.go.dev](https://pkg.go.dev/github.com/marco-montesines/haveibeenpwned) regenerates the API docs from the source.
 
 ## Immutability
 
