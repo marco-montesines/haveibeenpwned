@@ -1,0 +1,63 @@
+site_name: haveibeenpwned
+site_description: Go client for the Have I Been Pwned API v3 — library, CLI, HTTP server, FrankenPHP extension
+site_url: https://marco-montesines.github.io/haveibeenpwned/
+repo_url: https://github.com/marco-montesines/haveibeenpwned
+repo_name: marco-montesines/haveibeenpwned
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.suggest
+
+nav:
+  - Overview: README.md
+  - Project:
+      - Project Status: status.md
+      - Roadmap: roadmap.md
+      - Use Cases: use-cases.md
+      - Releases & Versioning: releases.md
+  - Integrate:
+      - Getting Started: getting-started.md
+      - Library Guide: library.md
+      - CLI Guide: cli.md
+      - HTTP API Reference: http-api.md
+      - FrankenPHP Extension: frankenphp.md
+  - Operate:
+      - Deployment & IaC: deployment.md
+      - FAQ & Troubleshooting: faq.md
+
+extra_css:
+  - assets/extra.css
+
+markdown_extensions:
+  - admonition
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences

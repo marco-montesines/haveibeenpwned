@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="haveibeenpwned">
+  <rect width="32" height="32" rx="7" fill="#16212E"/>
+  <path d="M16 3.5 L26.5 7.5 V15 C26.5 22 22.2 26.8 16 29.3 C9.8 26.8 5.5 22 5.5 15 V7.5 Z"
+        fill="rgba(255,255,255,0.06)" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="1.6" stroke-linejoin="round"/>
+  <g>
+    <rect x="9.8"  y="12.5" width="2"   height="8"  rx="1" fill="#E8A33D"/>
+    <rect x="12.9" y="10"   width="2"   height="11" rx="1" fill="#E8A33D"/>
+    <rect x="16"   y="13.8" width="2"   height="6.5" rx="1" fill="#E8A33D"/>
+    <rect x="19.1" y="11.5" width="2"   height="9"  rx="1" fill="#E8A33D" opacity="0.55"/>
+    <rect x="22.2" y="13.3" width="2"   height="6.5" rx="1" fill="#E8A33D" opacity="0.28"/>
+  </g>
+</svg>

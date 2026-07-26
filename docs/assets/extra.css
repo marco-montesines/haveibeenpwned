@@ -1,0 +1,120 @@
+/* ---- palette: ink navy + amber (k-anonymity mark colors) ---- */
+:root {
+  --md-primary-fg-color: #16212e;
+  --md-primary-fg-color--light: #24344a;
+  --md-primary-fg-color--dark: #0d1520;
+  --md-accent-fg-color: #b06d10;
+  --hibp-amber: #e8a33d;
+  --hibp-amber-dim: rgba(232, 163, 61, 0.14);
+}
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: #e8a33d;
+  --md-typeset-a-color: #ecb763;
+  --md-default-bg-color: #131a23;
+  --md-code-bg-color: #1a2330;
+}
+[data-md-color-scheme="default"] {
+  --md-typeset-a-color: #24466e;
+}
+
+/* ---- type: mono site title echoes the `hibp` CLI ---- */
+.md-header__topic .md-ellipsis,
+.md-nav--primary .md-nav__title[for="__drawer"] {
+  font-family: var(--md-code-font-family);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--md-default-fg-color);
+}
+.md-typeset h2 {
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* ---- signature: the truncated-hash hero ---- */
+.hibp-hero {
+  margin: 1.2em 0 1.6em;
+  padding: 1.1rem 1.2rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-left: 0.2rem solid var(--hibp-amber);
+  border-radius: 0.3rem;
+  background: linear-gradient(135deg, var(--hibp-amber-dim), transparent 55%);
+}
+.hibp-hero__label {
+  display: block;
+  font-family: var(--md-code-font-family);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.45rem;
+}
+.hibp-hero__hash {
+  font-family: var(--md-code-font-family);
+  font-size: clamp(0.72rem, 2.2vw, 0.95rem);
+  font-weight: 600;
+  word-break: break-all;
+  line-height: 1.6;
+}
+.hibp-hero__hash .keep {
+  color: var(--hibp-amber);
+  background: var(--hibp-amber-dim);
+  border-radius: 0.15rem;
+  padding: 0.1rem 0.25rem;
+}
+.hibp-hero__hash .drop {
+  opacity: 0.32;
+}
+.hibp-hero__caption {
+  margin: 0.5rem 0 0;
+  font-size: 0.68rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---- four delivery forms as cards ---- */
+.hibp-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr));
+  gap: 0.65rem;
+  margin: 1em 0 1.5em;
+}
+.hibp-card {
+  display: block;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  color: var(--md-default-fg-color) !important;
+  transition: border-color 125ms, transform 125ms;
+}
+.hibp-card:hover,
+.hibp-card:focus-visible {
+  border-color: var(--hibp-amber);
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .hibp-card,
+  .hibp-card:hover {
+    transition: none;
+    transform: none;
+  }
+}
+.hibp-card strong {
+  display: block;
+  font-family: var(--md-code-font-family);
+  font-size: 0.72rem;
+  margin-bottom: 0.25rem;
+  color: var(--hibp-amber);
+  filter: brightness(0.82);
+}
+[data-md-color-scheme="slate"] .hibp-card strong {
+  filter: none;
+}
+.hibp-card span {
+  font-size: 0.68rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.45;
+}
