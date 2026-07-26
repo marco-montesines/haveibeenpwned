@@ -2,7 +2,7 @@
 
 _Last updated: 2026-07-26._
 
-**Current release: [v1.0.4](https://github.com/marco-montesines/haveibeenpwned/releases)** — stable, actively maintained, low-churn by design.
+**Current release: [v1.0.5](https://github.com/marco-montesines/haveibeenpwned/releases)** — stable, actively maintained, low-churn by design.
 
 ## Health
 
