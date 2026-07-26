@@ -1,0 +1,1 @@
+Unofficial client — not affiliated with or endorsed by [Have I Been Pwned](https://haveibeenpwned.com) or Troy Hunt. Breach and paste data © HIBP, licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); applications displaying it must visibly credit haveibeenpwned.com. Code is [MIT licensed](https://github.com/marco-montesines/haveibeenpwned/blob/master/LICENSE).
